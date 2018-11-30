@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wellness - Food Log</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script>
+  $(document).ready(function () {
+
+    //Calculate both inputs value on the fly
+    $('.calculate').keyup(function () {
+        var Tot = parseFloat($('#Monday').val()) + parseFloat($('#Tuesday').val())+ parseFloat($('#Wednesday').val())+ parseFloat($('#Thurs').val())+ parseFloat($('#Friday').val())+ parseFloat($('#Saturday').val())+ parseFloat($('#Sunday').val());
+        $('#total').val(Tot);
+    });
+
+    //Clear both inputs first time when user focus on each inputs and clear value 00
+    $('.calculate').focus(function (event) {
+        $(this).val("").unbind(event);
+    });
+
+  
+    });
+</script>  
+<style>
+html,
+body{
+ height: 100%;
+}
+
+p{
+	font-size: 18px;
+	font-weight: bolder;
+}
+#cover {
+  background: #00205B url('') center center no-repeat;
+  background-size: cover;
+  height: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#cover-caption {
+  width: 100%;
+}
+.form-row, .form-group{
+	color:white;
+}
+.col-1{
+  
+}
+.btn{
+	background-color:#A6192e;
+	font-weight:bolder;
+}
+</style>
+</head>
+<body>
+	<section id="cover">
+    <div id="cover-caption">
+        <div id="container" class="container">
+            <div class="row text-white">
+                <div class="col-sm-10 offset-sm-1 text-center">
+                	<img src="Premier-logo-white-b-bkg.png" class="rounded float-left" width="400" alt="logo">
+                    <h1> Premier Wellness Program</h1>
+                    <h2>Liquid Intake</h2>
+                    <p>Points: 15</p>
+                    <p>To satisfy this challenge, you must record liquid intake daily for each week of the month. The daily liquid intake should be 64 oz. The goal is 1600 oz in one month.</p>
+  </div>
+</div>
+<br />
+ <form>
+  <div class="form-row">
+    <div class="form-group col-md-4 ">
+      <p>Name</p>
+      <input type="text" class="form-control" id="inputName4" required>
+    </div>
+    <div class="form-group col-md-4">
+      <p>ID Number</p>
+      <input type="text" class="form-control" id="inputTerminal4" required>
+    </div>
+    <div class="form-group col-md-4">
+      <p>Month</p>
+      <input type="text" class="form-control" id="inputTerminal4" required>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="form-group row">
+    <p>Week 1:</p>
+  	<div class="col-sm-1 offset-sm-1">
+    <p>Mon.</p>
+    <input type="text" class="form-control" id="Monday" required>
+  </div>
+  <div class="col-sm-1">
+   <p>Tues.</p>
+    <input type="text" class="form-control" id="Tuesday" required>
+  </div>
+   <div class="col-sm-1">
+    <p>Wed.</p>
+    <input type="text" class="form-control" id="Wednesday" required>
+  </div>
+  <div class="col-sm-1">
+    <p>Thurs.</p>
+    <input type="text" class="form-control" id="Thursday" required>
+  </div>
+  <div class="col-1">
+   <p>Fri.</p>
+    <input type="text" class="form-control" id="Friday" required>
+  </div>
+  <div class="col-1">
+    <p>Sat.</p>
+    <input type="text" class="form-control" id="Saturday" required>
+  </div>
+  <div class="col-1">
+    <p>Sun.</p>
+    <input type="text" class="form-control" id="Sunday" required>
+  </div>
+  <div class="col-2">
+    <p>Total</p>
+    <input type="text" class="form-control" id="Total" readonly>
+  </div>
+</div>
+<div class="form-group row">
+  <p>Week 2:</p>
+    <div class="col-sm-1 offset-sm-1">
+    <p>Mon.</p>
+    <input type="text" class="form-control" id="Monday" required>
+  </div>
+  <div class="col-1">
+   <p>Tues.</p>
+    <input type="text" class="form-control" id="Tuesday" required>
+  </div>
+   <div class="col-1">
+    <p>Wed.</p>
+    <input type="text" class="form-control" id="Wednesday" required>
+  </div>
+  <div class="col-1">
+    <p>Thurs.</p>
+    <input type="text" class="form-control" id="Thursday" required>
+  </div>
+  <div class="col-1">
+   <p>Fri.</p>
+    <input type="text" class="form-control" id="Friday" required>
+  </div>
+  <div class="col-1">
+    <p>Sat.</p>
+    <input type="text" class="form-control" id="Saturday" required>
+  </div>
+  <div class="col-1">
+    <p>Sun.</p>
+    <input type="text" class="form-control" id="Sunday" required>
+  </div>
+  <div class="col-2">
+    <p>Total</p>
+    <input type="text" class="form-control" id="Total" required>
+  </div>
+</div>
+<div class="form-group row">
+  <p>Week 3:</p>
+    <div class="col-sm-1 offset-sm-1">
+    <p>Mon.</p>
+    <input type="text" class="form-control" id="Monday" required>
+  </div>
+  <div class="col-1">
+   <p>Tues.</p>
+    <input type="text" class="form-control" id="Tuesday" required>
+  </div>
+   <div class="col-1">
+    <p>Wed.</p>
+    <input type="text" class="form-control" id="Wednesday" required>
+  </div>
+  <div class="col-1">
+    <p>Thurs.</p>
+    <input type="text" class="form-control" id="Thursday" required>
+  </div>
+  <div class="col-1">
+   <p>Fri.</p>
+    <input type="text" class="form-control" id="Friday" required>
+  </div>
+  <div class="col-1">
+    <p>Sat.</p>
+    <input type="text" class="form-control" id="Saturday" required>
+  </div>
+  <div class="col-1">
+    <p>Sun.</p>
+    <input type="text" class="form-control" id="Sunday" required>
+  </div>
+  <div class="col-2">
+    <p>Total</p>
+    <input type="text" class="form-control" id="Total" required>
+  </div>
+</div>
+<div class="form-group row">
+  <p>Week 4:</p>
+    <div class="col-sm-1 offset-sm-1">
+    <p>Mon.</p>
+    <input type="text" class="form-control" id="Monday" required>
+  </div>
+  <div class="col-1">
+   <p>Tues.</p>
+    <input type="text" class="form-control" id="Tuesday" required>
+  </div>
+   <div class="col-1">
+    <p>Wed.</p>
+    <input type="text" class="form-control" id="Wednesday" required>
+  </div>
+  <div class="col-1">
+    <p>Thurs.</p>
+    <input type="text" class="form-control" id="Thursday" required>
+  </div>
+  <div class="col-1">
+   <p>Fri.</p>
+    <input type="text" class="form-control" id="Friday" required>
+  </div>
+  <div class="col-1">
+    <p>Sat.</p>
+    <input type="text" class="form-control" id="Saturday" required>
+  </div>
+  <div class="col-1">
+    <p>Sun.</p>
+    <input type="text" class="form-control" id="Sunday" required>
+  </div>
+  <div class="col-2">
+    <p>Total</p>
+    <input type="text" class="form-control" id="Total" required>
+  </div>
+</div>
+<br />
+<br />
+<div class="form-row">
+    <div class="form-group col-md-2 offset-sm-4">
+      <p>Date</p>
+      <input type="date" class="form-control" id="Date" required>
+    </div>
+    <div class="form-group col-md-2">
+      <p>Monthly Total</p>
+      <input type="text" class="form-control" id="inputTerminal4" required>
+    </div>
+  </div>
+  <br />
+  <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+  <br />
+  <br />
+  <p>All private health information</p>
+</form>
+</div>
+</div>
+</section>
+</body>
+</html>
