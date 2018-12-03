@@ -22,12 +22,21 @@ p{
   display: flex;
   align-items: center;
 }
-
+#form {
+  background:#e6f7ff;
+  background-size: cover;
+  height:auto;
+}
 #cover-caption {
   width: 100%;
 }
 .form-row, .form-group{
-	color:white;
+	color:#00205B;
+  font-weight: bolder;
+}
+.form-control{
+  border-color: #00205B ;
+  border-width: thin;
 }
 .btn{
 	background-color:#A6192e;
@@ -48,17 +57,23 @@ p{
                     <p>15 extra points will be added if you mention the amount of calories, fat grams, or protein that is in each serving of food.You must have 5 days of food logs completed within a quarter. Log all that you eat and drink in those days.</p>
   </div>
 </div>
+</div>
+</div>
+</section>
+<section id="form">
  <form>
+  <div id="container" class="container">
   <div class="row">
-    <div class="form-group col-md-4 ">
-      <label for="inputName4">Name</label>
+    <div class="form-group col-md-4">
+      <label for="inputName4"><strong>Name</strong></label>
       <input type="text" class="form-control" id="inputName4" required>
     </div>
     <div class="form-group col-md-4">
-      <label for="inputID">ID Number</label>
+      <label for="inputID"><strong>ID Number</strong></label>
       <input type="text" class="form-control" id="inputTerminal4" required>
     </div>
   </div>
+  <br />
   <div class="form-row">
   	<div class="form-group col-md-4">
     <p>Day 1</p>
@@ -145,6 +160,17 @@ p{
 </form>
 </div>
 </div>
+<a href="index.htm" button class="btn btn-primary btn-sm mr-sm-4" role="button">Back</a>
 </section>
+<footer>
+ <div id="container" class="container">
+            
+    <div class="footer-copyright py-2 text-center">
+      © 2018 Copyright:
+      <a href=> Premier Transportation </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
 </body>
 </html>
