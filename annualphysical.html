@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Annual Physical</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+html,
+body{
+ height: 100%;
+}
+
+p{
+	color:#00205B;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+#cover {
+  background: #00205B url('') center center no-repeat;
+  background-size: cover;
+  height: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#cover-caption {
+  width: 100%;
+}
+
+.form-row, .form-group, .form-check, .form-check-inline{
+	color:#00205B;
+}
+.btn{
+	background-color:#A6192e;
+	font-weight:bolder;
+}
+</style>
+</head>
+<body>
+	<section id="cover">
+    <div id="cover-caption">
+        <div id="container" class="container">
+            <div class="row text-white">
+                <div class="col-sm-10 offset-sm-1 text-center">
+                	<img src="Premier-logo-white-b-bkg.png" class="float-left" width="400" alt="logo">
+                    <h1> Premier Wellness Program</h1>
+                    <h2>Annual Physical/Wellness Exam</h2>
+                    <h5>Points:50</h5>
+                    <h5>Please provide the required information to document the completion of an annual physical or wellness examination.</h5>
+  </div>
+</div>
+</div>
+</div>
+</section>
+<br />
+ <div id="container" class="container">
+<form style="">
+  <div class="row">
+    <div class="form-group col-md-4 offset-sm-2">
+      <label for="inputName4"><strong>Name</strong></label>
+      <input type="text" class="form-control" id="inputName4" required>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputID"><strong>ID Number</strong></label>
+      <input type="text" class="form-control" id="inputTerminal4" required>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+  <div class ="form-group col-md-4">
+  	<p>Health Care Provider:</p>
+  	<input type="text" class="form-control" id="Provided" required>
+  </div>
+  <div class ="form-group col-md-4">
+  	<p>Phone</p>
+  	<input type="text" class="form-control" id="Phone" required>
+  </div>
+  <div class ="form-group col-md-4">
+  	<p>Date of Service</p>
+      <input type="date" class="form-control" id="Date" required>
+  </div>
+</div>
+<br />
+  <p>Does the Premier Wellness Coordinator have your permission to confirm that you completed your annual exam?</p>
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+  <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+  <label class="form-check-label" for="inlineCheckbox2">No</label>
+</div>
+<br />
+<br />
+<p>You May also provide a copy of the receipt or printout  that indetifies your visit as having completed a basic physical or wellness examination.</p>
+<div class="form-group">
+    <label for="exampleFormControlFile1"><strong>Attach File</strong></label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <br />
+  <div class="row">
+  <div class="form-group col-md-4 offset-sm-2">
+      <label for="inputSign"><strong>Signature</strong></label>
+      <input type="text" class="form-control" id="inputSign" required>
+      <p id="Signature" class="form-text text-muted" style="font-size:12px">
+  By signing, you acknowledge that you did attend your annualphysical or wellness examination, and that the documentation you are providing is valid and original.
+</p>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="date"><strong>Date</strong></label>
+      <input type="date" class="form-control" id="date" required>
+      
+   </div>
+ </div>
+</div>
+</form>
+</div>
+</div>
+</section>
+</body>
+</html>
