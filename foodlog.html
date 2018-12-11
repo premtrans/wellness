@@ -28,7 +28,7 @@ p{
   height:auto;
 }
 #cover-caption {
-  width: 100%;
+  wnameth: 100%;
 }
 .form-row, .form-group{
 	color:#00205B;
@@ -36,7 +36,7 @@ p{
 }
 .form-control{
   border-color: #00205B ;
-  border-width: thin;
+  border-wnameth: thin;
 }
 .btn{
 	background-color:#A6192e;
@@ -48,13 +48,13 @@ footer{
 </style>
 </head>
 <body>
-  
 	<section id="cover">
+     <img src="Premier-logo-white-b-bkg.png" class="float-top-left"  width="300" alt="logo">
     <div id="cover-caption">
         <div id="container" class="container">
             <div class="row text-white">
                 <div class="col-sm-10 offset-sm-1 text-center">
-                	<img src="Premier-logo-white-b-bkg.png" class="rounded float-left" width="400" alt="logo">
+                
                     <h1> Premier Wellness Program</h1>
                     <h2>Food Log</h2>
                     <p>Points: 35-50</p>
@@ -64,7 +64,7 @@ footer{
 </div>
 </div>
 </section>
- <form action="mailto:ahooks@premiertransportation.com" method="post">
+ <form name="foodlog" action="/foodlog.php" method="post">
   <div id="container" class="container">
   <div class="row">
     <div class="form-group col-md-4">
@@ -72,8 +72,8 @@ footer{
       <input type="text" class="form-control" name="name" required>
     </div>
     <div class="form-group col-md-4">
-      <label for="inputID"><strong>ID Number</strong></label>
-      <input type="text" class="form-control" id="inputTerminal4" required>
+      <label for="id"><strong>ID Number</strong></label>
+      <input type="text" class="form-control" name="name" required>
     </div>
   </div>
   <br />
@@ -81,83 +81,83 @@ footer{
   	<div class="form-group col-md-4">
     <p>Day 1</p>
     <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" id="Breakfast" rows="3" required></textarea><br />
+    <textarea class="form-control" name="day1" rows="3" required></textarea><br />
     <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" id="Lunch" rows="3" required></textarea><br />
+    <textarea class="form-control" name="day1" rows="3" required></textarea><br />
     <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" id="Dinner" rows="3" required></textarea><br />
+    <textarea class="form-control" name="day1" rows="3" required></textarea><br />
     <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" id="Drinks" rows="3" required></textarea><br />
+    <textarea class="form-control" name="day1" rows="3" required></textarea><br />
     <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" id="DTC" rows="1"></textarea>
+    <textarea class="form-control" name="calories" rows="1"></textarea>
   </div>
   <div class="form-group col-md-4">
     <p>Day 2</p>
     <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" id="Breakfast" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Breakfast" rows="3" required></textarea><br />
     <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" id="Lunch" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Lunch" rows="3" required></textarea><br />
     <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" id="Dinner" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Dinner" rows="3" required></textarea><br />
     <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" id="Drinks" rows="3" required></textarea>
+    <textarea class="form-control" name="Drinks" rows="3" required></textarea>
     <br />
     <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" id="DTC" rows="1"></textarea>
+    <textarea class="form-control" name="calories" rows="1"></textarea>
   </div>
    <div class="form-group col-md-4">
     <p>Day 3</p>
     <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" id="Breakfast" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Breakfast" rows="3" required></textarea><br />
     <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" id="Lunch" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Lunch" rows="3" required></textarea><br />
     <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" id="Dinner" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Dinner" rows="3" required></textarea><br />
     <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" id="Drinks" rows="3" required></textarea>
+    <textarea class="form-control" name="Drinks" rows="3" required></textarea>
     <br />
     <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" id="DTC" rows="1"></textarea>
+    <textarea class="form-control" name="calories" rows="1"></textarea>
   </div>
 </div>
    <div class="form-row">
   	<div class="form-group col-md-4">
     <p>Day 4</p>
     <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" id="Breakfast" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Breakfast" rows="3" required></textarea><br />
     <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" id="Lunch" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Lunch" rows="3" required></textarea><br />
     <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" id="Dinner" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Dinner" rows="3" required></textarea><br />
     <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" id="Drinks" rows="3" required></textarea>
+    <textarea class="form-control" name="Drinks" rows="3" required></textarea>
     <br />
     <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" id="DTC" rows="1"></textarea>
+    <textarea class="form-control" name="calories" rows="1"></textarea>
   </div>
   <div class="form-group col-md-4">
     <p>Day 5</p>
     <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" id="Breakfast" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Breakfast" rows="3" required></textarea><br />
     <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" id="Lunch" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Lunch" rows="3" required></textarea><br />
     <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" id="Dinner" rows="3" required></textarea><br />
+    <textarea class="form-control" name="Dinner" rows="3" required></textarea><br />
     <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" id="Drinks" rows="3" required></textarea>
+    <textarea class="form-control" name="Drinks" rows="3" required></textarea>
     <br />
     <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" id="DTC" rows="1"></textarea>
+    <textarea class="form-control" name="calories" rows="1"></textarea>
   </div>
 <br />
 <br />
  <div class="form-group col-md-12">
 	<p>What was unhealthy about your diet?</p>
-	<textarea class="form-control" id="Unhealthy" rows="2"></textarea>
+	<textarea class="form-control" name="Unhealthy" rows="2"></textarea>
 	<p>What was healthy about your diet?</p>
-	<textarea class="form-control" id="Healthy" rows="2"></textarea>
+	<textarea class="form-control" name="Healthy" rows="2"></textarea>
 	<p>What would you change or modify?</p>
-	<textarea class="form-control" id="Modify" rows="2"></textarea><br />
+	<textarea class="form-control" name="Modify" rows="2"></textarea><br />
 </div>
 <div>
   <button type="submit" class="btn btn-lg btn-primary">Submit</button>&nbsp;
