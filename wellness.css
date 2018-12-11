@@ -1,0 +1,40 @@
+html,
+body{
+ height: 100%;
+}
+
+p{
+	font-size: 18px;
+	font-weight: bolder;
+}
+#cover {
+  background: #00205B url('')no-repeat;
+  background-size: cover;
+  height: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#form {
+  background:#e6f7ff;
+  background-size: cover;
+  height:auto;
+}
+#cover-caption {
+  width: 100%;
+}
+.form-row, .form-group{
+	color:#00205B;
+  font-weight: bolder;
+}
+.form-control{
+  border-color: #00205B ;
+  border-width: thin;
+}
+.btn{
+	background-color:#A6192e;
+	font-weight:bolder;
+}
+footer{
+  background-color: #00205B;
+}
