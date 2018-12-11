@@ -15,7 +15,7 @@ p{
 	font-weight: bolder;
 }
 #cover {
-  background: #00205B url('') center center no-repeat;
+  background: #00205B url('')no-repeat;
   background-size: cover;
   height: auto;
   text-align: center;
@@ -28,7 +28,7 @@ p{
   height:auto;
 }
 #cover-caption {
-  wnameth: 100%;
+  width: 100%;
 }
 .form-row, .form-group{
 	color:#00205B;
@@ -36,7 +36,7 @@ p{
 }
 .form-control{
   border-color: #00205B ;
-  border-wnameth: thin;
+  border-width: thin;
 }
 .btn{
 	background-color:#A6192e;
@@ -49,12 +49,11 @@ footer{
 </head>
 <body>
 	<section id="cover">
-     <img src="Premier-logo-white-b-bkg.png" class="float-top-left"  width="300" alt="logo">
     <div id="cover-caption">
         <div id="container" class="container">
             <div class="row text-white">
                 <div class="col-sm-10 offset-sm-1 text-center">
-                
+                  <img src="Premier-logo-white-b-bkg.png" class="float-left" width="400" alt="logo">
                     <h1> Premier Wellness Program</h1>
                     <h2>Food Log</h2>
                     <p>Points: 35-50</p>
@@ -64,7 +63,7 @@ footer{
 </div>
 </div>
 </section>
- <form name="foodlog" action="/foodlog.php" method="post">
+ <form name="foodlog" action="foodlog.php" method="post">
   <div id="container" class="container">
   <div class="row">
     <div class="form-group col-md-4">
@@ -160,7 +159,7 @@ footer{
 	<textarea class="form-control" name="Modify" rows="2"></textarea><br />
 </div>
 <div>
-  <button type="submit" class="btn btn-lg btn-primary">Submit</button>&nbsp;
+  <button type="submit" name="formSubmit" class="btn btn-lg btn-primary">Submit</button>&nbsp;
   <a href="index.html" button class="btn btn-primary btn-sm mr-sm-4" role="button">Back</a> 
 </div>
 </div>
