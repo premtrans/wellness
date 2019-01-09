@@ -1,99 +1,75 @@
 <?php
-if(isset($_POST['email'])) {
- 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "ahooks@premiertransportation.com";
-    $email_subject = "FoodLog";
- 
-    function died($error) {
-        // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        die();
+/*
+ *  CONFIGURE EVERYTHING HERE
+ */
+
+// an email address that will be in the From field of the email.
+$from = 'Demo contact form <demo@domain.com>';
+
+// an email address that will receive the email with the output of the form
+$sendTo = 'HR Wellness Form <ahooks@premiertransportation.com>';
+
+// subject of the email
+$subject = 'New Food Log';
+
+// form field names and their translations.
+// array variable name => Text to appear in the email
+$fields = array('name' => 'Name', 'id' => 'idNumber', 'breakfast' => 'Breakfast', 'lunch' => 'Lunch', 'dinner' => 'Dinner', 'drinks' => 'Drinks', 'calories' => 'Daily Total Calories', 'unhealthy' => 'Unhealthy', 'healthy' => 'Healthy', 'modufy' => 'Modify'); 
+
+// message that will be displayed when everything is OK :)
+$okMessage = 'Food Log successfully submitted.';
+
+// If something goes wrong, we will display this message.
+$errorMessage = 'There was an error while submitting the form. Please try again later';
+
+/*
+ *  LET'S DO THE SENDING
+ */
+
+// if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
+error_reporting(E_ALL & ~E_NOTICE);
+
+try
+{
+
+    if(count($_POST) == 0) throw new \Exception('Form is empty');
+            
+    $emailText = "You have a new Food Log message\n=============================\n";
+
+    foreach ($_POST as $key => $value) {
+        // If the field exists in the $fields array, include it in the email 
+        if (isset($fields[$key])) {
+            $emailText .= "$fields[$key]: $value\n";
+        }
     }
- 
- 
-    // validation expected data exists
-    if(!isset($_POST['name']) ||
-        !isset($_POST['id']) ||
-        !isset($_POST['breakfast']) ||
-        !isset($_POST['lunch']) ||
-        !isset($_POST['dinner']) ||
-        !isset($_POST['snacks']) ||
-        !isset($_POST['unhealthy']) ||
-        !isset($_POST['healthy'])||
-        !isset($_POST['change'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
-    }
- 
-     
- 
-    $name = $_POST['name']; // required
-    $id = $_POST['id']; // required
-    $breakfast = $_POST['breakfast']; // required
-    $lunch = $_POST['lunch']; // required
-    $dinner = $_POST['dinner']; // required
-    $snacks =$_POST['snacks']; // required
-    $calories =$_POST['calories']; // not required
-    $unhealthy =$_POST['unhealthy']; //required
-    $healthy =$_POST['healthy']; // required
-    $change =$_POST['change']; //required
- 
+
+    // All the neccessary headers for the email.
+    $headers = array('Content-Type: text/plain; charset="UTF-8";',
+        'From: ' . $from,
+        'Reply-To: ' . $from,
+        'Return-Path: ' . $from,
+    );
     
- 
-    $string_exp = "/^[A-Za-z .'-]+$/";
- 
-  if(!preg_match($string_exp,$name)) {
-    $error_message .= 'The  Name you entered does not appear to be valid.<br />';
-  }
- 
-  if(!preg_match($string_exp,$id)) {
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-  }
- 
-  if(strlen($comments) < 2) {
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
-  }
- 
-  if(strlen($error_message) > 0) {
-    died($error_message);
-  }
- 
-    $email_message = "Form details below.\n\n";
- 
-     
-    function clean_string($string) {
-      $bad = array("content-type","bcc:","to:","cc:","href");
-      return str_replace($bad,"",$string);
-    }
- 
-     
- 
-    $email_message .= "Name: ".clean_string($name)."\n";
-    $email_message .= "ID: ".clean_string($id)."\n";
-    $email_message .= "Day1: ".clean_string($day1)."\n";
-     $email_message .= "Day2: ".clean_string($day2)."\n";
-      $email_message .= "Day3: ".clean_string($day3)."\n";
-     $email_message .= "Day4: ".clean_string($day4)."\n";
-      $email_message .= "Day5: ".clean_string($day5)."\n";
-     $email_message .= "Unhealthy: ".clean_string($healthy)."\n";
-     $email_message .= "Modify: ".clean_string($modify)."\n";
-    $email_message .= "Healthy: ".clean_string($day1)."\n";
- 
-// create email headers
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);  
-?>
- 
-<!-- include your own success html here -->
- 
-Your food log has been submitted. 
- 
-<?php
- 
+    // Send email
+    mail($sendTo, $subject, $emailText, implode("\n", $headers));
+
+    $responseArray = array('type' => 'success', 'message' => $okMessage);
 }
-?>
+catch (\Exception $e)
+{
+    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+}
+
+
+// if requested by AJAX request return JSON response
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $encoded = json_encode($responseArray);
+
+    header('Content-Type: application/json');
+
+    echo $encoded;
+}
+// else just display the message
+else {
+    echo $responseArray['message'];
+}

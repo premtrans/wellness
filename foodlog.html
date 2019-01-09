@@ -4,6 +4,12 @@
 	<title>Wellness - Food Log</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="wellness.css">
+  <style>
+   #col-12 {
+    border-width: 45px; !important;
+    border-color: #00205B;  !important;
+  }
+</style>
 <script>
   $(function () {
 
@@ -68,12 +74,13 @@
 </div>
 </div>
 </section>
- <form name="foodlog" action="foodlog.php" method="post">
   <div id="container" class="container">
+ <form id="foodlog" method="POST" action="foodlog.php">
   <div class="row">
     <div class="form-group col-md-4">
       <label for="name"><strong>Name</strong></label>
-      <input type="text" class="form-control" name="name" required>
+      <input type="text" class="form-control" name="full_name" required>
+      
     </div>
     <div class="form-group col-md-4">
       <label for="id"><strong>ID Number</strong></label>
@@ -84,75 +91,171 @@
   <div class="form-row">
   	<div class="form-group col-md-4">
     <p>Day 1</p>
-    <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" name="day1" rows="3" required></textarea><br />
-    <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" name="day1" rows="3" required></textarea><br />
-    <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" name="day1" rows="3" required></textarea><br />
-    <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" name="day1" rows="3" required></textarea><br />
-    <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" name="calories" rows="1"></textarea>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Breakfast" required></textarea>
   </div>
-  <div class="form-group col-md-4">
-    <p>Day 2</p>
-    <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" name="Breakfast" rows="3" required></textarea><br />
-    <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" name="Lunch" rows="3" required></textarea><br />
-    <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" name="Dinner" rows="3" required></textarea><br />
-    <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" name="Drinks" rows="3" required></textarea>
-    <br />
-    <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" name="calories" rows="1"></textarea>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Lunch" required></textarea>
   </div>
-   <div class="form-group col-md-4">
-    <p>Day 3</p>
-    <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" name="Breakfast" rows="3" required></textarea><br />
-    <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" name="Lunch" rows="3" required></textarea><br />
-    <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" name="Dinner" rows="3" required></textarea><br />
-    <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" name="Drinks" rows="3" required></textarea>
-    <br />
-    <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" name="calories" rows="1"></textarea>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Dinner" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Drinks/Snacks" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+<div class="12">
+  <label for="DTC">Daily Total Calories:</label>
+  <div class="col-5">
+    <input type="text" class="form-control">
   </div>
 </div>
-   <div class="form-row">
-  	<div class="form-group col-md-4">
-    <p>Day 4</p>
-    <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" name="Breakfast" rows="3" required></textarea><br />
-    <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" name="Lunch" rows="3" required></textarea><br />
-    <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" name="Dinner" rows="3" required></textarea><br />
-    <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" name="Drinks" rows="3" required></textarea>
-    <br />
-    <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" name="calories" rows="1"></textarea>
+</div>
+  <div class="form-group col-md-4">
+    <p>Day 2</p>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Breakfast" required></textarea>
   </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Lunch" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Dinner" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Drinks/Snacks" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+<div class="12">
+  <label for="DTC">Daily Total Calories:</label>
+  <div class="col-5">
+    <input type="text" class="form-control">
+  </div>
+</div>
+</div>
+   <div class="form-group col-md-4">
+    <p>Day 3</p>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Breakfast" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Lunch" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Dinner" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day1" rows="3" placeholder="Drinks/Snacks" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+<div class="12">
+  <label for="DTC">Daily Total Calories:</label>
+  <div class="col-5">
+    <input type="text" class="form-control">
+  </div>
+</div>
+</div>
+</div>
+   <div class="form-row">
+    <div class="form-group col-md-4">
+    <p>Day 4</p>
+    <div class="col-12">
+    <textarea class="form-control" name="day4" rows="3" placeholder="Breakfast" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day4" rows="3" placeholder="Lunch" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day4" rows="3" placeholder="Dinner" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day4" rows="3" placeholder="Drinks/Snacks" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+<div class="12">
+  <label for="DTC">Daily Total Calories:</label>
+  <div class="col-5">
+    <input type="text" class="form-control">
+  </div>
+</div>
+</div>
   <div class="form-group col-md-4">
     <p>Day 5</p>
-    <label for="Breakfast">Breakfast:</label>
-    <textarea class="form-control" name="Breakfast" rows="3" required></textarea><br />
-    <label for ="Lunch">Lunch</label>
-    <textarea class="form-control" name="Lunch" rows="3" required></textarea><br />
-    <label for ="Dinner">Dinner</label>
-    <textarea class="form-control" name="Dinner" rows="3" required></textarea><br />
-    <label for ="Drinks">Drinks/Snacks</label>
-    <textarea class="form-control" name="Drinks" rows="3" required></textarea>
-    <br />
-    <label for ="DTC">Daily Total Calories</label>
-    <textarea class="form-control" name="calories" rows="1"></textarea>
+    <div class="col-12">
+    <textarea class="form-control" name="day5" rows="3" placeholder="Breakfast" required></textarea>
   </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day5" rows="3" placeholder="Lunch" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day5" rows="3" placeholder="Dinner" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"><br />
+</div>
+    <div class="col-12">
+    <textarea class="form-control" name="day5" rows="3" placeholder="Drinks/Snacks" required></textarea>
+  </div>
+      <div class="col-4">
+    <input type="text" class="form-control" placeholder="Calories"> <br />
+</div>
+<div class="12">
+  <label for="DTC">Daily Total Calories:</label>
+  <div class="col-5">
+    <input type="text" class="form-control">
+  </div>
+</div>
+</div>
 <br />
 <br />
  <div class="form-group col-md-12">
@@ -173,6 +276,7 @@
 </div>
 </div>
 </section>
+<br />
 <footer>      
     <div class="footer text-center text-white">
       © 2018 Copyright:
